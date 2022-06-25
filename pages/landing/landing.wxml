@@ -1,0 +1,3 @@
+<view wx:for="{{pets}}" wx:for-item="pet" class="card" wx:key="unique">
+  <view>{{pet.name}}</view>
+</view>
