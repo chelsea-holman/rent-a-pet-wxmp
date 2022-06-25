@@ -16,7 +16,8 @@ Page({
   
       // Get api data
       wx.request({
-        url: "http://localhost:3000/api/v1/pets",
+        // url: "http://localhost:3000/api/v1/pets",
+        url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
         method: 'GET',
         success(res) {
           const pets = res.data;
