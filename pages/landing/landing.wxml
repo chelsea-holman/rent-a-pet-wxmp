@@ -1,3 +1,15 @@
-<view wx:for="{{pets}}" wx:for-item="pet" class="card" wx:key="unique">
-  <view>{{pet.name}}</view>
+<view class="container">
+  <view style="margin-bottom: 20rpx;">
+    <view class="title">Current Pet Rentals</view>
+  </view>
 </view>
+<view wx:for="{{pets}}" wx:for-item="pet" bindtap="goToStory" data-id="{{pet.id}}" class="card" wx:key="unique">
+  <image src="{{pet.image}}" style="width: 150rpx; height: 150rpx; border-radius: 20rpx; margin-right: 20rpx; object-fit: cover; flex-shrink: 0;" />
+  <view style="font-weight: bolder;">{{pet.name}}</view>
+  <view>Species: {{pet.species}}</view>
+  <view>About me: {{pet.bio}}</view>
+</view>
+
+
+<view class="cta" bindtap="goToForm">+</view>
+   

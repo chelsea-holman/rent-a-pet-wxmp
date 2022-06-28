@@ -1,4 +1,5 @@
-// pages/landing/landing.js
+// pages/show/show.js
+const app = getApp();
 Page({
 
   /**
@@ -11,26 +12,21 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad(options) {
-    let page = this;
-  
-      // Get api data
-      wx.request({
-        // url: "http://localhost:3000/api/v1/pets",
-        url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
-        method: 'GET',
-        success(res) {
-          const pets = res.data;
-          // Update local data
-          page.setData({
-            pets: pets
-          });
-  
-          wx.hideToast();
-        }
-      });
+  onLoad: function (options) {
+    console.log(options.id)
+    this.getStory(options.id);
   },
 
+  getStory(id) {
+    const page = this;
+    wx.request({
+      url: `https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets/?id=${id}`,
+      method: 'GET',
+      success(res) {
+        page.setData({ story: res.data.story })
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -78,12 +74,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-  goToStory(e) {
-  
-    const id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/show/show?id=${id}`,
-    })
-  },
+  }
 })

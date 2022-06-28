@@ -1,0 +1,6 @@
+<view class="container">
+  <image src="{{ pet.image }}" class="banner" />
+  <view class="title" style="margin-bottom: 20rpx">{{ pet.name }}</view>
+  <view class="subtitle" style="margin-bottom: 20rpx"> {{ pet.species }} </view>
+  <view class="subtitle" style="margin-bottom: 20rpx"> {{ pet.bio }} </view>
+</view>
