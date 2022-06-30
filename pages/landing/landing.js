@@ -1,6 +1,7 @@
 // pages/landing/landing.js
+const app = getApp();
 Page({
-
+  
   /**
    * Page initial data
    */
@@ -13,13 +14,17 @@ Page({
    */
   onLoad(options) {
     let page = this;
-  
+    let header = wx.getStorageSync('header')
+    console.log(header)
       // Get api data
       wx.request({
-        // url: "http://localhost:3000/api/v1/pets",
-        url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+        url: `${app.globalData.baseUrl}/pets`,
+        // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
         method: 'GET',
+        header: header,
+        
         success(res) {
+          console.log(res)
           const pets = res.data;
           // Update local data
           page.setData({
@@ -83,7 +88,7 @@ Page({
   
     const id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/show/show?id=${id}`,
+      url: `../show/show?id=${id}`,
     })
   },
 })

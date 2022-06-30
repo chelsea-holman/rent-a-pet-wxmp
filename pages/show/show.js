@@ -13,15 +13,18 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log(options)
     console.log(options.id)
-    this.getStory(options.id);
+    this.getPet(options.id);
   },
 
-  getStory(id) {
+  getPet(id) {
     const page = this;
+    let header = wx.getStorageSync('header')
     wx.request({
-      url: `https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets/?id=${id}`,
+      url: `${app.globalData.baseUrl}/pets/${id}`,
       method: 'GET',
+      header,
       success(res) {
         page.setData({ pet: res.data })
       }

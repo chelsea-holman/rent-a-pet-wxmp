@@ -18,7 +18,7 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
-          "query": "",
+          "query": "id=1",
           "launchMode": "default",
           "scene": null
         }

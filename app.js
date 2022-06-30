@@ -16,8 +16,11 @@ App({
           data: { code: res.code }, // pass code in request body
         success(loginRes) {
           console.log({loginRes}) // { data: { headers: { "X-USER-TOKEN": <User Token> }, user: <User Object> }, ... }
-          app.globalData.user = loginRes.data.user
-          app.globalData.header = loginRes.data.headers
+          wx.setStorageSync('header', loginRes.data.headers)
+          wx.setStorageSync('user', loginRes.data.user)
+          // app.globalData.user = loginRes.data.user
+          // app.globalData.header = loginRes.data.headers
+
         }, 
         fail(loginError) {
           console.log({loginError})
