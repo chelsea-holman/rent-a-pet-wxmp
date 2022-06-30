@@ -32,3 +32,18 @@
   right: 40rpx;
   z-index: 999;
 }
+
+page{
+  background-color: pink;
+}
+
+.title{
+  color: white;
+  text-shadow: textShadow(0.25, 6, #F2A063);
+  font-size: 60rpx;
+}
+
+.btn btn-pri{
+  margin: 0 auto;
+  width: 60%;
+}

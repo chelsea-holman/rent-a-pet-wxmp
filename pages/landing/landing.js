@@ -79,6 +79,13 @@ Page({
   onShareAppMessage() {
 
   },
+
+  goToShow: function () {
+    wx.navigateTo({
+      url: 'pages/show/show',
+    })
+  },
+
   goToStory(e) {
   
     const id = e.currentTarget.dataset.id;
