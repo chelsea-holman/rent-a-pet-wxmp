@@ -84,6 +84,7 @@ Page({
   onShareAppMessage() {
 
   },
+
   goToPet(e) {
   
     const id = e.currentTarget.dataset.id;
