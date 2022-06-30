@@ -79,7 +79,7 @@ Page({
   onShareAppMessage() {
 
   },
-  goToStory(e) {
+  goToPet(e) {
   
     const id = e.currentTarget.dataset.id;
     wx.navigateTo({

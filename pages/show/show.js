@@ -23,7 +23,7 @@ Page({
       url: `https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets/?id=${id}`,
       method: 'GET',
       success(res) {
-        page.setData({ story: res.data.story })
+        page.setData({ pet: res.data })
       }
     })
   },
