@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+  
   },
 
   /**
@@ -30,21 +30,24 @@ Page({
 
   submit: function (e) {
     console.log(e)
+    let header = wx.getStorageSync('header')
     const data = e.detail.value
     const { id } = this.options
     if (id) this.updatePet(id, data)
-    if (!id) this.createPet(data)
-    wx.switchTab({
+    if (!id) this.createPet(data, header)
+    wx.navigateTo({
       url: '/pages/landing/landing',
     })
   },
 
 
-  createPet(data) {
+  createPet(data, header) {
+
     wx.request({
       url: 'http://localhost:3000/api/v1/pets',
       method: 'POST',
-      data,
+      data: data,
+      header: header,
       success(res) {
         wx.navigateTo({
           url: '/pages/landing/landing',
