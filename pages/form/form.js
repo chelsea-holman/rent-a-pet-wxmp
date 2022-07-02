@@ -29,6 +29,7 @@ Page({
   // },
 
   submit: function (e) {
+    console.log(e)
     const data = e.detail.value
     const { id } = this.options
     if (id) this.updatePet(id, data)
