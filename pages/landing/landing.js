@@ -18,8 +18,8 @@ Page({
     console.log(header)
       // Get api data
       wx.request({
-        url: `${app.globalData.baseUrl}/pets`,
-        // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+        // url: `${app.globalData.baseUrl}/pets`,
+        url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
         method: 'GET',
         header: header,
         
