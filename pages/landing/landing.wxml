@@ -13,6 +13,8 @@
   <view style="font-weight: bolder;">{{pet.name}}</view>
   <view>Species: {{pet.species}}</view>
   <view>About me: {{pet.bio}}</view>
+  <view data-id="{{pet.id}}" catchtap="updatePet" style="font-size: smaller; position: absolute; right: 20rpx; top: 20rpx">Edit</view>
+  <view data-id="{{pet.id}}" catchtap="deletePet" style="font-size: smaller; position: absolute; right: 20rpx; bottom: 20rpx"><image src="/images/trashcan.svg" style="width: 40rpx; height: 40rpx;"/></view> 
 </view>
-
+<view class="cta" bindtap="goToForm">+</view>
 

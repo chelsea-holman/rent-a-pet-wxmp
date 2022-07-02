@@ -92,4 +92,9 @@ Page({
       url: `../show/show?id=${id}`,
     })
   },
+  goToForm() {
+    wx.navigateTo({
+      url: '../form/form',
+    })
+  }
 })
