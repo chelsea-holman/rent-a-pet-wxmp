@@ -1,1 +1,47 @@
-/* pages/form/form.wxss */
+/* pages/post/post.wxss */
+.weui-input{
+  height: 60rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.06);
+  border: 1rpx solid #E7E7E7;
+  border-radius: 4rpx;
+}
+
+.page-section-title{
+  display: block;
+  padding: 16rpx 0;
+}
+
+.container-form{
+  padding: 32rpx 48rpx;
+  margin: 16rpx;
+}
+
+.btn-flat {
+  color: white;
+  padding: 16rpx 48rpx;
+  border-radius: 8rpx;
+  background: #84A98C;
+  transition: background 0.3s ease;
+  margin:64rpx;
+}
+
+.btn-flat:hover {
+  background: #52796F;
+  color: white;
+}
+
+.page-section-title{
+  font-weight: bold;
+  color:#7a7676;
+  font-size: 35rpx;
+}
+
+.h1 {
+  margin: 16rpx;
+  color: grey;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 56rpx;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
