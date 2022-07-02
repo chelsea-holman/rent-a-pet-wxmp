@@ -1,0 +1,22 @@
+<!--pages/post/post.wxml-->
+<view class="container-form">
+<text class="h1">Tell me your pet</text>
+    <form bindsubmit="submit">
+      <view class="page-section">
+        <view class="page-section-title">Name</view>
+          <input class="weui-input" name="title" placeholder="Please type the name......" />
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">Bio</view>
+          <input class="weui-input" name="description" placeholder="Please type the bio......" />
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">Species</view>
+          <input class="weui-input" name="description" placeholder="Please type the species......" />
+      </view>
+
+      <button form-type="submit" class="btn-flat">Submit</button>
+    </form>
+</view>

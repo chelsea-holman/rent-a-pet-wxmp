@@ -77,5 +77,11 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  goToForm() {
+    wx.navigateTo({
+      url: '../form/form',
+    })
   }
+ 
 })
