@@ -12,6 +12,27 @@
   display: flex;
 }
 
+.title{
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+
+.pet-button {
+  display: block;
+  background:rgb(50, 0, 167);
+  color: white;
+  opacity: .8;
+  padding: 14rpx 24rpx;
+  border-radius: 2%;
+  font-weight: bold;
+  margin: 24rpx 200rpx;
+  text-align: center;
+  /* display: block; */
+  /* text-align: center; */
+}
+
 .cta {
   position: fixed;
   bottom: 80rpx;
