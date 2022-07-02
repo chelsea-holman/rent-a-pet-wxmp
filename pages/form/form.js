@@ -34,7 +34,11 @@ Page({
     const { id } = this.options
     if (id) this.updatePet(id, data)
     if (!id) this.createPet(data)
+    wx.switchTab({
+      url: '/pages/landing/landing',
+    })
   },
+
 
   createPet(data) {
     wx.request({
@@ -57,7 +61,7 @@ Page({
       data,
       success(res) {
         wx.navigateTo({
-          url: '/pages/pets/pets',
+          url: '/pages/landing/landing',
         })
         console.log(res);
       }
