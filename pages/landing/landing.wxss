@@ -3,6 +3,7 @@
   padding: 40rpx;
 }
 
+
 .card {
   box-shadow: 0 0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 20rpx;
@@ -10,10 +11,6 @@
   margin-bottom: 20rpx;
   position: relative;
   display: flex;
-}
-
-.card, view {
-  display: block;
 }
 
 .cta {
@@ -33,8 +30,12 @@
   z-index: 999;
 }
 
+.card, view {
+  display: block;
+}
+
 page{
-  background-color: pink;
+  background-color: white;
 }
 
 .title{
