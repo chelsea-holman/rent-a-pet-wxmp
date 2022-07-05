@@ -1,6 +1,7 @@
 /* pages/landing/landing.wxss *//* pages/stories/stories.wxss */
 .container {
   padding: 40rpx;
+  margin: 0 20rpx 20rpx 20rpx;
 }
 
 
@@ -11,6 +12,8 @@
   margin-bottom: 20rpx;
   position: relative;
   display: flex;
+  background-color: lightgray;
+  width: 100%; 
 }
 
 .cta {
@@ -37,13 +40,21 @@
 page{
   background-color: white;
 }
-
+.heading{
+  color: #F2A063;
+  text-shadow: textShadow(0.25, 6, #F2A063);
+  font-size: 80rpx; 
+  font-style: bold;
+}
 .title{
-  color: white;
+  color:#F2A063;
   text-shadow: textShadow(0.25, 6, #F2A063);
   font-size: 60rpx;
 }
-
+.sub-heading{
+  color:#6B7280;
+  font-size: 35rpx;
+}
 .btn btn-pri{
   margin: 0 auto;
   width: 60%;
