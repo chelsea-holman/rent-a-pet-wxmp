@@ -17,6 +17,11 @@
           <input class="weui-input" name="species" placeholder="Please type the species......" />
       </view>
 
+      <view class="contain">
+        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique"></image>
+      </view>
+      <button bindtap="uploadImage">Upload Image</button>
+      
       <button form-type="submit" class="btn-flat">Submit</button>
     </form>
 </view>

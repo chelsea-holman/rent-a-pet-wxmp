@@ -1,0 +1,4 @@
+<view class="contain">
+  <image wx:for="{{image_url}}" src="{{item}}"></image>
+</view>
+<button bindtap="uploadImage">upload image</button>
