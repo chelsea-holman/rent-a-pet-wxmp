@@ -44,7 +44,7 @@ page{
   color: #F2A063;
   text-shadow: textShadow(0.25, 6, #F2A063);
   font-size: 80rpx; 
-  font-style: bold;
+  font-weight: bold;
 }
 .title{
   color:#F2A063;

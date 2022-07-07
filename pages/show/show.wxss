@@ -11,7 +11,12 @@
   position: relative;
   display: flex;
 }
-
+.heading {
+  color: #111827; 
+  text-shadow: textShadow(0.25, 6, #111827);
+  font-size: 80rpx; 
+  font-weight: bold;
+}
 .title{
   font-size: larger;
   font-weight: bold;

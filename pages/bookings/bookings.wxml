@@ -1,0 +1,8 @@
+<!--pages/bookings/bookings.wxml-->
+<text>pages/bookings/bookings.wxml</text>
+<view class="container">
+  <view>
+    <view class="banner"></view>
+    <view class="heading">Bookings</view>
+  </view>
+</view>

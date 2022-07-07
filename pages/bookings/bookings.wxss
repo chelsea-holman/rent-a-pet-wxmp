@@ -1,0 +1,23 @@
+/* pages/bookings/bookings.wxss */
+.container {
+  padding: 40rpx;
+  margin: 0 20rpx 20rpx 20rpx;
+}
+
+.card {
+  box-shadow: 0 0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 20rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  display: flex;
+  background-color: lightgray;
+  width: 100%; 
+}
+
+.title{
+  color: #111827; 
+  text-shadow: textShadow(0.25, 6, #111827); 
+  font-size: 80rpx; 
+  font-weight: bold;
+}
