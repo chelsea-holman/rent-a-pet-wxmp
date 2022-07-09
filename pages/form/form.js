@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-    image_url:[]
+    image_url: []
    },
  
   /**
@@ -43,13 +43,31 @@ Page({
 
 
   createPet(data, header) {
-
+    const url = app.globalData.baseUrl;
+    let page = this;
     wx.request({
       url: `${app.globalData.baseUrl}/pets`,
       method: 'POST',
       data: data,
       header: header,
       success(res) {
+        // send photo to backend
+        console.log(res)
+        wx.uploadFile({
+          url: `${url}/pets/${res.data.id}/upload`,
+          filePath: page.data.image_url[0],
+          name: 'file',
+          header: header,
+          success(res) {
+            console.log('this is for upload file', res)
+          },
+          fail(err) {
+            console
+            console.log(err)
+          }
+        })
+
+        
         wx.navigateTo({
           url: '/pages/landing/landing',
         })
@@ -124,7 +142,7 @@ Page({
   uploadImage(){
     let that = this
     wx.chooseMedia({
-      count:9,
+      count: 9,
       mediaType:['image','video'],
       sourceType:['album','camera'],
       maxDuration:30,
@@ -132,7 +150,8 @@ Page({
       success:(res)=>{
         console.log(res.tempFiles[0].tempFilePath);
         that.setData({
-          image_url:that.data.image_url.concat(res.tempFiles[0].tempFilePath)
+          image_url: that.data.image_url.concat(res.tempFiles[0].tempFilePath)
+          // image_url: res.tempFiles[0].tempFilePath,
         })
       }
     })
