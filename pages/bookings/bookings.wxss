@@ -1,0 +1,44 @@
+/* pages/bookings/bookings.wxss */
+
+.header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 60rpx;
+}
+
+.pet-name {
+  font-weight: bold;
+}
+
+.booking-container {
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 40rpx;
+}
+
+
+
+
+.btn-container {
+  display: flex;
+}
+
+
+.booking-btn {
+  text-align: center;
+  color: white;
+  padding: 16rpx 48rpx;
+  border-radius: 8rpx;
+  background: rgb(50, 0, 167);
+  transition: background 0.3s ease;
+  margin:40rpx;
+}
+
+.booking-btn:hover {
+  background: rgb(78, 7, 245);
+  color: white;
+}

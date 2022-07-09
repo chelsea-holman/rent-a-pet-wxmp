@@ -3,6 +3,11 @@
   padding: 40rpx;
 }
 
+.show-img {
+  width: 700rpx;
+  /* margin: 0 0rpx; */
+}
+
 .card {
   box-shadow: 0 0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 20rpx;
@@ -17,7 +22,18 @@
   font-weight: bold;
 }
 
+.booked-button {
+  display: block;
+  background:rgb(50, 0, 167);
+  color: white;
+  opacity: .8;
+  padding: 14rpx 24rpx;
+  border-radius: 2%;
+  font-weight: bold;
+  margin: 24rpx 30rpx;
+  text-align: center;
 
+}
 
 .pet-button {
   display: block;
