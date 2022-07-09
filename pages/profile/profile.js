@@ -1,4 +1,4 @@
-
+// pages/profile/profile.js
 const app = getApp();
 Page({
 
@@ -13,22 +13,29 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    console.log(options)
-    console.log(options.id)
-    this.getBooking(options.id);
-  },
-
-  getBooking(id) {
-    const page = this;
+    let page = this;
     let header = wx.getStorageSync('header')
-    wx.request({
-      url: `${app.globalData.baseUrl}/bookings/${id}`,
-      method: 'GET',
-      header,
-      success(res) {
-        page.setData({ booking: res.data })
-      }
-    })
+    console.log(header)
+      // Get api data
+      wx.request({
+        url: `${app.globalData.baseUrl}/bookings`,
+        // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+        method: 'GET',
+        header: header,
+        
+        success(res) {
+          console.log(res)
+          const bookings = res.data;
+          // Update local data
+          page.setData({
+            bookings: bookings
+          });
+  
+          wx.hideToast();
+        }
+      });
+
+
   },
 
   /**
@@ -78,18 +85,10 @@ Page({
    */
   onShareAppMessage() {
 
-  }, 
-
+  },
   seePets() {
     wx.navigateTo({
       url: '../landing/landing',
     })
   }, 
-
-  seeBookings() {
-    wx.navigateTo({
-      url: '../profile/profile',
-    })
-
-  }
 })

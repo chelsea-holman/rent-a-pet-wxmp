@@ -4,15 +4,21 @@
     <view class="title">{{ pet.name }}</view>
   </view>
 
-
-   
-
-
 <view class="container">
+
   <image src="{{ pet.image }}" class="banner" />
   <view class="heading">{{ pet.name }}</view>
+  <image src="{{ pet.image }}" class="banner show-img" mode="aspectFit"/>
   <view class="subtitle" style="margin-bottom: 20rpx"> Animal type: {{ pet.species }} </view>
   <view class="subtitle" style="margin-bottom: 20rpx"> About me: {{ pet.bio }} </view>
-  <text class="pet-button">Adopt {{ pet.name }}!</text>
+  <view wx:if="{{count > 0}}">
+  <text class="booked-button" bindtap="goToBookings"> You have already booked {{ pet.name }}! See your bookings here.</text>
+
+  </view>
+  <view wx:if="{{count === 0}}">
+  <text class="pet-button" bindtap="goToBook" data-id="{{pet.id}}">Rent {{ pet.name }}!</text>
+  
+</view>
+  
 </view>
 </view>

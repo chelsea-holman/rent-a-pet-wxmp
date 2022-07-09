@@ -1,23 +1,46 @@
 /* pages/bookings/bookings.wxss */
-.container {
-  padding: 40rpx;
-  margin: 0 20rpx 20rpx 20rpx;
+
+
+.header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 60rpx;
 }
 
-.card {
-  box-shadow: 0 0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  padding: 20rpx;
-  border-radius: 20rpx;
-  margin-bottom: 20rpx;
-  position: relative;
-  display: flex;
-  background-color: lightgray;
-  width: 100%; 
-}
-
-.title{
-  color: #111827; 
-  text-shadow: textShadow(0.25, 6, #111827); 
-  font-size: 80rpx; 
+.pet-name {
   font-weight: bold;
 }
+
+.booking-container {
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 40rpx;
+}
+
+
+
+
+.btn-container {
+  display: flex;
+}
+
+
+.booking-btn {
+  text-align: center;
+  color: white;
+  padding: 16rpx 48rpx;
+  border-radius: 8rpx;
+  background: rgb(50, 0, 167);
+  transition: background 0.3s ease;
+  margin:40rpx;
+}
+
+.booking-btn:hover {
+  background: rgb(78, 7, 245);
+  color: white;
+}
+

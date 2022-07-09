@@ -26,7 +26,10 @@ Page({
       method: 'GET',
       header,
       success(res) {
-        page.setData({ pet: res.data })
+        console.log(res.data)
+        page.setData({ pet: res.data.pet,
+        count: res.data.booking_count })
+        console.log(res.data.booking_count)
       }
     })
   },
@@ -82,6 +85,39 @@ Page({
     wx.navigateTo({
       url: '../form/form',
     })
+  },
+
+  goToBook: function (e) {
+    console.log(e.currentTarget.dataset.id)
+    let header = wx.getStorageSync('header')
+    const petId = e.currentTarget.dataset.id
+    // const { id } = this.options
+    // if (id) this.updatePet(id, data)
+    this.createBooking(petId, header)
+    // wx.navigateTo({
+    //   url: '/pages/landing/landing',
+    // })
+  },
+
+  createBooking(petId, header) {
+    wx.request({
+      // url: 'http://localhost:3000/api/v1/pets',
+      url: `${app.globalData.baseUrl}/pets/${petId}/bookings`,
+      method: 'POST',
+      header: header,
+      success(res) {
+        console.log(res.data)
+        wx.navigateTo({
+          url: `/pages/bookings/bookings?id=${res.data.id}`,
+        })
+        console.log(res);
+      }
+    })
+  },
+
+  goToBookings() {
+    wx.navigateTo({
+      url: '../profile/profile',
+    })
   }
- 
 })
