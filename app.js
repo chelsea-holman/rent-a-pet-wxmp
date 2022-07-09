@@ -34,7 +34,9 @@ App({
     userInfo: null,
     header: null,
     user: null,
-    baseUrl: 'http://localhost:3000/api/v1'
-    // baseUrl: 'https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1'
+
+    // baseUrl: 'http://localhost:3000/api/v1'
+  baseUrl: 'https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1'
+
   }
 })

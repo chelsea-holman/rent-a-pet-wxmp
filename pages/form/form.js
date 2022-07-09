@@ -46,6 +46,7 @@ Page({
     const url = app.globalData.baseUrl;
     let page = this;
     wx.request({
+      // url: 'http://localhost:3000/api/v1/pets',
       url: `${app.globalData.baseUrl}/pets`,
       method: 'POST',
       data: data,

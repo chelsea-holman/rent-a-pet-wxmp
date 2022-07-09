@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 60rpx;
+}
+
+.booking-card {
+  
+  align-items: center;
+  box-shadow: 0 0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 20rpx;
+  border-radius: 20rpx;
+  margin: 20rpx 90rpx;
+  position: relative;
+  display: flex;
+  background-color: lightgray;
+
+}
+
+.pet-name {
+  font-size: 40rpx;
+}
+
+.booking-btn {
+  text-align: center;
+  color: white;
+  padding: 16rpx 24rpx;
+  border-radius: 8rpx;
+  background: rgb(50, 0, 167);
+  transition: background 0.3s ease;
+  margin:40rpx 200rpx;
+
+}
