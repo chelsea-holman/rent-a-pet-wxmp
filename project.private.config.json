@@ -35,6 +35,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/img_upload/img_upload",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

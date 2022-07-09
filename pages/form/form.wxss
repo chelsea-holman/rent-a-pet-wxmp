@@ -45,3 +45,22 @@
   display: block;
   text-align: center;
 }
+
+.contain{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+image{
+  width:200rpx;
+  height:200rpx;
+}
+
+.btn-red{
+  color: white;
+  padding: 16rpx 48rpx;
+  border-radius: 8rpx;
+  background: #d67676;
+  transition: background 0.3s ease;
+  margin:64rpx;
+}
