@@ -1,0 +1,18 @@
+<view class="header">Your booking details:
+</view>
+<view class="booking-container">
+
+  <image class="image" src="{{booking.pet.image}}" mode="aspectFit"/>
+
+<view class="pet-info">
+<view class="pet-name">{{booking.pet.name}} the {{booking.pet.species}}</view>
+<view>Booking status: {{booking.status}}</view>
+</view>
+</view>
+
+<view class="btn-container">
+<view class="booking-btn"bindtap="seePets">Back to all pets</view>
+
+<view class="booking-btn" bindtap="seeBookings" >See all my bookings</view>
+</view>
+

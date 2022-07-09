@@ -1,4 +1,5 @@
 // pages/form/form.js
+const app = getApp();
 Page({
 
   /**
@@ -44,7 +45,8 @@ Page({
   createPet(data, header) {
 
     wx.request({
-      url: 'http://localhost:3000/api/v1/pets',
+      // url: 'http://localhost:3000/api/v1/pets',
+      url: `${app.globalData.baseUrl}/pets`,
       method: 'POST',
       data: data,
       header: header,
