@@ -1,4 +1,4 @@
-// pages/bookings/bookings.js
+
 const app = getApp();
 Page({
 
@@ -90,5 +90,6 @@ Page({
     wx.navigateTo({
       url: '../profile/profile',
     })
+
   }
 })

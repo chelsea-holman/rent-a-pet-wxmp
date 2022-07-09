@@ -6,7 +6,8 @@
     "pages/bookings/bookings",
     "pages/profile/profile",
     "pages/logs/logs",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/bookings/bookings"
   ],
   "window":{
     "backgroundTextStyle":"light",

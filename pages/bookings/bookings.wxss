@@ -1,5 +1,6 @@
 /* pages/bookings/bookings.wxss */
 
+
 .header {
   text-align: center;
   font-weight: bolder;
@@ -42,3 +43,4 @@
   background: rgb(78, 7, 245);
   color: white;
 }
+
